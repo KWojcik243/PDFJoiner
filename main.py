@@ -6,12 +6,11 @@ box = tk.Tk()
 box.withdraw()
 while True:
     while True:
-        list_files = []
         list_files = filedialog.askopenfilenames(parent=box,
                                                  title="Choose files",
                                                  filetypes=[("PDF files", '*.pdf')])
         if len(list_files) < 2:
-            action = input("You must select at least two files. Do you want to try again?"
+            action = input("You have to select at least two files. Do you want to try again?"
                            " If so, write 'yes', else write anything, and press enter. \n")
             if action.lower() != "yes":
                 exit()
